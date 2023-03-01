@@ -1,16 +1,19 @@
-<h1><center>Restaurant Rating Prediction</center></h1>
+# <p align="center"> Restaurant Rating Prediction </p>
 
-<p><center>Predicting the aggregate <b>rating</b> of Zomato restaurants using <b>Machine Learning</b>.</center></p>
+<p align="center">Predicting the aggregate <b>rating</b> of Zomato restaurants using <b>Machine Learning</b>.</p>
 
-<p><center>Tools used: Python (<b>Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn, Dython</b>)</center></p>
+<p align="center"> Tools used: Python (<b>Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn, Dython</b>)</p>
 
-<p><center>Sections:</center></p> 
-    <p><center><li><b>Data Analysis and Cleaning</b></li> 
-    <li><b>Feature Engineering and Preprocessing</b></li>
-    <li><b>Model building and Tuning</b></li></center></p>
+#
+
+**Sections:**
+* [Data Analysis and Cleaning](https://github.com/You-sha/Zomato-Ratings-Prediction#data-analysis-and-cleaning)
+* [Feature Engineering and Preprocessing](https://github.com/You-sha/Zomato-Ratings-Prediction#feature-engineering-and-preprocessing)
+* [Model building and Tuning](https://github.com/You-sha/Zomato-Ratings-Prediction#model-building-and-tuning)
+
+#
 
 First, we import the libraries that we will be using:
-
 
 ```python
 import numpy as np
@@ -32,21 +35,6 @@ HTML("""
 """)
 ```
 
-
-
-
-
-<style>
-.output_png {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-</style>
-
-
-
-
 Importing the data:
 
 
@@ -54,9 +42,7 @@ Importing the data:
 df = pd.read_csv('zomato.csv', encoding='ISO-8859-1') # Specifying the encoding is important or it will raise UTF error
 ```
 
-## Data Analysis and Cleaning
-
----
+# <p align="center"> Data Analysis and Cleaning </p>
 
 Let's get to know our data:
 
@@ -102,23 +88,6 @@ pd.set_option('display.max_columns',21)
 df.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -312,30 +281,13 @@ df.info()
 
 **Observation:** It seems ```Cuisines``` has some null values. We'll take a look at that.
 
----
+#
 
 
 ```python
 df.describe() # Looking at just the numerical columns
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -490,7 +442,7 @@ plt.show()
 
 Perfect.
 
----
+#
 
 There is something interesting about the ```Switch to order menu``` column:
 
@@ -539,7 +491,7 @@ Since that is not much use for us, we are going to drop it.
 df.drop('Switch to order menu', axis=1, inplace = True)
 ```
 
----
+#
 
 Since once of the categorical columns turned out to be useless for us, it makes sense to also take a look at the rest of them:
 
@@ -673,7 +625,7 @@ df.City.value_counts()
 
 **Observation:** So, all of these columns do have more than one value. That means they could actually be useful.
 
----
+#
 
 Now we are going to use the **Dython** library to make a correlation plot of all the features. What I like about this library is that it lets you easily plot the correlation between both categorical and continuous features, something that is not easy to do with Pandas.
 
@@ -689,9 +641,7 @@ plt.show()
     
 
 
-# Feature Engineering and Preprocessing
-
----
+# <p align="center"> Feature Engineering and Preprocessing </p>
 
 If we look at the ```Aggregate rating (con)``` row, we can see how correlated it is with the rest of the features.
 
@@ -756,23 +706,6 @@ Here is a visual example to see how the columns look:
 df.loc[df['cafe_coffee_day']==1].head(3)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -904,23 +837,6 @@ dummy(restaurants,'Restaurant Name')
 df.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1074,8 +990,6 @@ df.head()
 <p>5 rows × 30 columns</p>
 </div>
 
-
-
 Now we have **True** or **False** values for each of the top 10 restaurants. In python, True and False can also be written as **1** and **0**.
 
 Let's take a look at how many restaurants are named 'Cafe Coffee Day', using our new column:
@@ -1102,7 +1016,7 @@ df.shape
 
 **Observation:** So out of our **9542** different restaurants, **2730** are Cafe Coffee Day's.
 
----
+#
 
 Now let's take a look at the correlation between the ```Aggregate rating``` and the new columns that we have created.
 
@@ -1142,9 +1056,9 @@ This is going to be our final list of features for training and testing our mode
 
 **Important Note:** **We are not going to include the features ```Rating color``` and ```Rating text``` in this list. Their inclusion will not result in an actually useful model.**
 
-# Model Building and Tuning
+# <p align="center"> Model Building and Tuning </p>
 
----
+Now, using these features, we are going to build models to predict our target variable.
 
 ## Building
 
@@ -1162,23 +1076,6 @@ X = pd.get_dummies(df[features])
 X
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1441,8 +1338,6 @@ print(f"Error range: {residuals.max()-residuals.min()}")
 
 So our prediction's **error** range is around **2.782**.
 
----
-
 ## Tuning
 
 Now we are going to run **RandomizedSearchCV** to tune the model by improving the **hyperparameters**.
@@ -1544,7 +1439,7 @@ There is decrease in the model's errors.
 
 We can also run **GridSearchCV** on the parameters around these to maybe tune the model further. But we are done with model tuning for this project.
 
----
+#
 
 Let's plot the residuals for this final model:
 
@@ -1582,4 +1477,4 @@ print(f"Error difference of models: {(residuals.max() - residuals.min()) - (f_re
 
 When compared to the previous model (with **default** hyperparameters), our final model has a **22.7%** reduction in range of error.
 
-<h1><center>FIN</center></h1>
+ # <p align="center"> FIN </p>
