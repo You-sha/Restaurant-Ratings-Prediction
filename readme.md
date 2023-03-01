@@ -9,7 +9,7 @@
 **Sections:**
 * [Data Analysis and Cleaning](https://github.com/You-sha/Restaurant-Ratings-Prediction#-data-analysis-and-cleaning-)
 * [Feature Engineering and Preprocessing](https://github.com/You-sha/Restaurant-Ratings-Prediction#-feature-engineering-and-preprocessing-)
-* [Model building and Tuning](https://github.com/You-sha/Zomato-Ratings-Prediction#model-building-and-tuning)
+* [Model building and Tuning](https://github.com/You-sha/Restaurant-Ratings-Prediction#-model-building-and-tuning-)
 * [Results](https://github.com/You-sha/Zomato-Ratings-Prediction#-results-)
 
 #
