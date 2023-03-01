@@ -1439,7 +1439,7 @@ There is decrease in the model's errors.
 
 We can also run **GridSearchCV** on the parameters around these to maybe tune the model further. But we are done with model tuning for this project.
 
-#
+# <p align="center"> Results </p>
 
 Let's plot the residuals for this final model:
 
