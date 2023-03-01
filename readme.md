@@ -1476,6 +1476,6 @@ print(f"Error difference of models: {(residuals.max() - residuals.min()) - (f_re
     Error difference of models: 0.2271168325710664
     
 
-When compared to the previous model (with **default** hyperparameters), our final model has a **22.7** reduction in range of error.
+When compared to the previous model (with **default** hyperparameters), our final model has a **.227** reduction in range of error.
 
  # <p align="center"> FIN </p>
