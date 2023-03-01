@@ -10,6 +10,7 @@
 * [Data Analysis and Cleaning](https://github.com/You-sha/Zomato-Ratings-Prediction#data-analysis-and-cleaning)
 * [Feature Engineering and Preprocessing](https://github.com/You-sha/Zomato-Ratings-Prediction#feature-engineering-and-preprocessing)
 * [Model building and Tuning](https://github.com/You-sha/Zomato-Ratings-Prediction#model-building-and-tuning)
+* [Results](https://github.com/You-sha/Zomato-Ratings-Prediction#-results-)
 
 #
 
@@ -1475,6 +1476,6 @@ print(f"Error difference of models: {(residuals.max() - residuals.min()) - (f_re
     Error difference of models: 0.2271168325710664
     
 
-When compared to the previous model (with **default** hyperparameters), our final model has a **22.7%** reduction in range of error.
+When compared to the previous model (with **default** hyperparameters), our final model has a **22.7** reduction in range of error.
 
  # <p align="center"> FIN </p>
