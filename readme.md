@@ -12,6 +12,10 @@
 * [Model building and Tuning](https://github.com/You-sha/Restaurant-Ratings-Prediction#-model-building-and-tuning-)
 * [Results](https://github.com/You-sha/Zomato-Ratings-Prediction#-results-)
 
+**Summary:**
+
+Visualizing the data using **Seaborn** and **Dython**, **engineering new features** like cuisines and restaurant names, using **Random Forest Regressor** from **Scikit-learn** for prediction and tuning it using **RandomizedSearchCV** to further using improve performance.
+
 #
 
 First, we import the libraries that we will be using:
