@@ -14,7 +14,7 @@
 
 **Summary:**
 
-Visualizing the data using **Seaborn** and **Dython**, **engineering new features** like cuisines and restaurant names, using **Random Forest Regressor** from **Scikit-learn** for prediction and tuning it using **RandomizedSearchCV** to further using improve performance.
+Visualizing the data using **Seaborn** and **Dython**, **engineering new features** like cuisines and restaurant names, using **Random Forest Regressor** from **Scikit-learn** for prediction, **visualizing** and **evaluating model performance**, and finally tuning it using **RandomizedSearchCV** to further improve performance.
 
 #
 
