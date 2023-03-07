@@ -7,16 +7,23 @@
 #
 
 **Sections:**
-* [Data Analysis and Cleaning](https://github.com/You-sha/Restaurant-Ratings-Prediction#-data-analysis-and-cleaning-)
-* [Feature Engineering and Preprocessing](https://github.com/You-sha/Restaurant-Ratings-Prediction#-feature-engineering-and-preprocessing-)
-* [Model building and Tuning](https://github.com/You-sha/Restaurant-Ratings-Prediction#-model-building-and-tuning-)
-* [Results](https://github.com/You-sha/Zomato-Ratings-Prediction#-results-)
+* [Data Analysis and Cleaning](#-data-analysis-and-cleaning-)
+* [Feature Engineering and Preprocessing](#-feature-engineering-and-preprocessing-)
+* [Model building and Tuning](#-model-building-and-tuning-)
+* [Results](#-results-)
 
 **Summary:**
 
 Visualizing the data using **Seaborn** and **Dython**, **engineering new features** like cuisines and restaurant names, using **Random Forest Regressor** from **Scikit-learn** for prediction, **visualizing** and **evaluating model performance**, and finally tuning it using **RandomizedSearchCV** to further improve performance.
 
-#
+Final model with a **Mean Absolute Error of around 0.183**.
+
+![png](readme_files/readme_94_0.png)
+
+**Value:** This model can help restaurant aggregators and food delivery companies like Zomato in predicting the aggregate rating of new restaurants, or existing unrated ones. That can in turn increase customer satisfaction.
+
+
+# <p align="center"> Data Analysis and Cleaning </p>
 
 First, we import the libraries that we will be using:
 
@@ -46,8 +53,6 @@ Importing the data:
 ```python
 df = pd.read_csv('zomato.csv', encoding='ISO-8859-1') # Specifying the encoding is important or it will raise UTF error
 ```
-
-# <p align="center"> Data Analysis and Cleaning </p>
 
 Let's get to know our data:
 
