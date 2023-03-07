@@ -16,11 +16,13 @@
 
 Visualizing the data using **Seaborn** and **Dython**, **engineering new features** like cuisines and restaurant names, using **Random Forest Regressor** from **Scikit-learn** for prediction, **visualizing** and **evaluating model performance**, and finally tuning it using **RandomizedSearchCV** to further improve performance.
 
-Final model with a **Mean Absolute Error of around 0.183**.
+Final model with a **Mean Absolute Error of around 0.183**. We will also evaluate other metrics like MSE, RMSE, MDAE and MAPE.
+
+**Value:** This model can help restaurant aggregators and food delivery companies like Zomato in predicting the aggregate rating of new restaurants, or existing unrated ones. That can in turn increase customer satisfaction.
 
 ![png](readme_files/readme_94_0.png)
 
-**Value:** This model can help restaurant aggregators and food delivery companies like Zomato in predicting the aggregate rating of new restaurants, or existing unrated ones. That can in turn increase customer satisfaction.
+
 
 
 # <p align="center"> Data Analysis and Cleaning </p>
