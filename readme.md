@@ -291,7 +291,7 @@ df.info()
     memory usage: 1.5+ MB
     
 
-**Observation:** It seems ```Cuisines``` has some null values. We'll take a look at that.
+**Observation:** It seems ```Cuisines``` has some null values. We'll take a look at those.
 
 #
 
@@ -409,7 +409,7 @@ df.describe() # Looking at just the numerical columns
 
 
 
-Looks like no restaurant has full 5 star rating. Interesting.
+Looks like no restaurant has a full 5 stars rating. Interesting.
 
 Now let's take a look at the **null** values of our columns:
 
@@ -429,7 +429,7 @@ plt.show()
 
 **Observation:** ```Cuisines``` has 9 null values.
 
-Since we can't determince what cuisines a restaurant has from the other features in the dataset, we will just drop these null values.
+Since we can't determine what cuisines a restaurant has from the other features in the dataset, we will just drop these null values.
 
 
 ```python
