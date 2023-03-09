@@ -824,7 +824,7 @@ df.loc[df['cafe_coffee_day']==1].head(3)
 
 
 
-Wherever the ```Restaurant Name``` column's value is "Cafe Coffee Day", the value of the ```cafe_coffee_day``` column is 1, and the value for the rest of the new columns is zero.
+Wherever the ```Restaurant Name``` column's value is "Cafe Coffee Day", the value of the ```cafe_coffee_day``` column is 1.
 
 We will apply this function for all of the 10 most frequent restaurants:
 
